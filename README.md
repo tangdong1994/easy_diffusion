@@ -26,7 +26,7 @@ pytorch, cn_clip, sd-v1-5-inpainting
 
 **文生动图的示例图**
 
-![土鸡蛋炒番茄_镜头拉远](./image/土鸡蛋炒番茄_镜头拉远2.gif)
-![土鸡蛋炒番茄_镜头拉远](./image/土鸡蛋炒番茄_镜头拉远.gif)
-![米饭_镜头右移](./image/米饭_镜头右移.gif)
-![葱油生菜_镜头右上45度移](./image/葱油生菜_镜头右上45度移.gif)
+![土鸡蛋炒番茄_镜头拉远](easy_diffusion/image/土鸡蛋炒番茄_镜头拉远2.gif)
+![土鸡蛋炒番茄_镜头拉远](easy_diffusion/image/土鸡蛋炒番茄_镜头拉远.gif)
+![米饭_镜头右移](easy_diffusion/image/米饭_镜头右移.gif)
+![葱油生菜_镜头右上45度移](easy_diffusion/image/葱油生菜_镜头右上45度移.gif)
