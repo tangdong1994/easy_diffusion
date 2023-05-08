@@ -18,14 +18,20 @@ Easy diffusion需要pytorch、cn_clip和sd-v1-5-inpainting三个模块。其中�
 
 ## **How To Train and Sample**
 Easy diffusion的实现流程代码和代码使用的方法都在easy_diffusion/ipynb的Jupyter文件中，包括数据预处理、模型训练和模型推理等。
-### *数据集的准备和处理*
+### **数据集的准备和处理**
 由于easy_diffusion是一个用于生成文生动图的模型，所以需要准备一些包含文本和图像的数据集。数据集的处理可以分为以下几个步骤：
-收集中文文本和相应的图片数据集
-对中文文本进行分词、编码，得到中文文本的embedding表示
-对图片进行预处理，如调整大小、裁剪等操作
-将中文文本embedding和图片数据对应起来，组成可以用于模型训练的数据集
+
+-收集中文文本和相应的图片数据集
+
+-对中文文本进行分词、编码，得到中文文本的embedding表示
+
+-对图片进行预处理，如调整大小、裁剪等操作
+
+-将中文文本embedding和图片数据对应起来，组成可以用于模型训练的数据集
+
 将你收集到的数据实现为一个dataset文件，具体格式可以参考aiposdataset.py, aiposdatasetlmdb.py, pokendatasetlmdb.py
-### *模型训练和推理*
+
+### **模型训练和推理**
 模型训练和推理的流程代码都在easy_diffusion/ipynb的jupyter文件里面，包含有数据预处理、模型训练、模型推理等。
 
 ## **可能遇到的问题和解决方案**
@@ -61,6 +67,13 @@ easy_diffusion是一个基础的文生动图生成模型，可以根据具体需
 1.借用controlnet的效果，实现更多定制化的效果，替换目前的inpainting
 
 2.研究生成模型在生成过程中实现模态细粒度控制与驱动（目前正在进行中）
+
+## Doing List
+1.Video Generation--正在编写代码和实验中，后续有了结果会把代码开源；有兴趣的朋友可以关注我下面的git仓库，暂时只有我整理的资料和思路，代码得等有了成果再给出来。
+
+[video generation](https://github.com/tangdong1994/VideoGeneration)
+
+2.zero shot classfication--正在进一步实验和研究如何通过让模型学习现有的部分的数据进而推广到更大更广泛的数据上面去。
 
 ## **文生动图的方法**
 先调用cn_clip对中文进行处理，获得相应的embedding，传入到文生图的模型，得到original img，然后借助自定义的mask结合original img，实现动图和循环的效果。
